@@ -58,30 +58,18 @@ smart-assistance-agent/
 
 ## Key Features
 
-1. **Robust Configuration Management**:
-   - Type-validated configuration using Pydantic
-   - Environment variables with proper defaults and validation
-   - Separation of configuration from code
-
-2. **Modular Architecture**:
-   - Clean separation of concerns
-   - Components can be tested independently
-   - Easy to maintain and extend
-
-3. **Production-Ready Error Handling**:
-   - Comprehensive logging
-   - Graceful error handling
-   - User-friendly error messages
-
-4. **Multi-Turn Conversation Management**:
+1. **Multi-Turn Conversation Management**:
    - Persistent conversation history
    - Session management
    - Context pruning for long conversations
 
-5. **Fallback Mechanisms**:
+2. **Fallback Mechanisms**:
    - Knowledge base with internet search fallback
-   - Simulated responses when API keys are missing
-   - Sample data when vector database is missing
+  
+3. **Modular Architecture**:
+   - Components can be tested independently
+   - Easy to maintain and extend
+
 
 ### Testing
 
@@ -123,12 +111,8 @@ poetry run python scripts/build_knowledge_base.py --input_dir path/to/documents
 1. **API Key Management**:
    - Never commit API keys to version control
    - Use environment variables for sensitive information
-   - Use Streamlit secrets in production
 
 2. **User Input Validation**:
    - Validate and sanitize all user inputs
    - Handle file uploads securely
 
-3. **Error Messages**:
-   - Don't expose sensitive information in error messages
-   - Log detailed errors but show generic messages to users
